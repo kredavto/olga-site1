@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="ФИНДРАЙВ">
+  <defs>
+    <linearGradient id="goldm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f9e08a"/>
+      <stop offset="50%" stop-color="#d9a93b"/>
+      <stop offset="100%" stop-color="#f4d06a"/>
+    </linearGradient>
+    <filter id="glowm" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="120" height="120" rx="22" fill="#070707"/>
+  <g filter="url(#glowm)" fill="none" stroke="url(#goldm)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M34 30 Q60 22 86 30 L86 70 Q60 92 34 70 Z" stroke-width="4" opacity="0.85"/>
+    <path d="M22 52 L52 52" stroke-width="3.5"/>
+    <path d="M18 62 L56 62" stroke-width="3.5"/>
+    <path d="M30 48 Q56 40 72 52 Q88 50 96 64 L86 65 Q78 54 64 58 Q50 48 36 58 Z" stroke-width="4"/>
+    <circle cx="78" cy="65" r="6.5" stroke-width="3.5"/>
+  </g>
+</svg>

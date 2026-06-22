@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" width="640" height="640" role="img" aria-label="ФИНДРАЙВ — займы под залог автомобилей">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f9e08a"/>
+      <stop offset="35%" stop-color="#d9a93b"/>
+      <stop offset="65%" stop-color="#b8861f"/>
+      <stop offset="100%" stop-color="#f4d06a"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="640" height="640" rx="48" fill="#050505"/>
+  <g filter="url(#glow)" fill="none" stroke="url(#gold)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- shield -->
+    <path d="M210 150 Q320 110 430 150 L430 330 Q320 420 210 330 Z" stroke-width="10" opacity="0.9"/>
+    <!-- speed lines -->
+    <path d="M120 250 L290 250" stroke-width="9"/>
+    <path d="M100 285 L300 285" stroke-width="9"/>
+    <path d="M130 320 L280 320" stroke-width="9"/>
+    <!-- sports car silhouette -->
+    <path d="M150 230 Q280 200 360 245 Q420 215 470 245 Q520 255 540 300 L500 305
+             Q480 270 440 280 Q400 250 350 280 Q300 250 230 280 Z" stroke-width="11"/>
+    <!-- wheel -->
+    <circle cx="430" cy="305" r="26" stroke-width="10"/>
+  </g>
+  <g filter="url(#glow)">
+    <text x="320" y="500" text-anchor="middle" font-family="Manrope, Arial, sans-serif"
+          font-weight="800" font-size="104" letter-spacing="4" fill="url(#gold)">ФИНДРАЙВ</text>
+    <text x="320" y="548" text-anchor="middle" font-family="Manrope, Arial, sans-serif"
+          font-weight="600" font-size="24" letter-spacing="6" fill="#d9a93b">ЗАЙМЫ ПОД ЗАЛОГ АВТОМОБИЛЕЙ</text>
+  </g>
+</svg>

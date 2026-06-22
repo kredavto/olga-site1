@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Dark neon theme is the default for the whole site */
+  :root {
+    --background: 40 12% 4%;
+    --foreground: 42 60% 92%;
+
+    --card: 40 14% 8%;
+    --card-foreground: 42 50% 92%;
+
+    --popover: 40 14% 7%;
+    --popover-foreground: 42 50% 92%;
+
+    --primary: 43 86% 56%;
+    --primary-foreground: 40 30% 6%;
+
+    --secondary: 40 12% 14%;
+    --secondary-foreground: 42 50% 92%;
+
+    --muted: 40 10% 16%;
+    --muted-foreground: 42 18% 66%;
+
+    --accent: 43 80% 18%;
+    --accent-foreground: 43 90% 70%;
+
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 43 30% 18%;
+    --input: 43 25% 18%;
+    --ring: 43 86% 56%;
+
+    --radius: 0.85rem;
+
+    --hero-gradient: linear-gradient(135deg, hsl(48, 95%, 70%) 0%, hsl(43, 86%, 56%) 45%, hsl(38, 80%, 46%) 100%);
+    --section-alt: 40 14% 6%;
+    --stats-bg: 40 16% 5%;
+    --stats-foreground: 42 60% 92%;
+
+    --neon: 43 90% 60%;
+
+    --sidebar-background: 40 14% 6%;
+    --sidebar-foreground: 42 30% 88%;
+    --sidebar-primary: 43 86% 56%;
+    --sidebar-primary-foreground: 40 30% 6%;
+    --sidebar-accent: 43 80% 18%;
+    --sidebar-accent-foreground: 43 90% 70%;
+    --sidebar-border: 43 30% 18%;
+    --sidebar-ring: 43 86% 56%;
+  }
+
+  /* keep .dark identical so existing dark: utilities behave */
+  .dark { color-scheme: dark; }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    background-color: hsl(var(--background));
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    background-image:
+      radial-gradient(circle at 15% 15%, hsla(43, 86%, 40%, 0.10), transparent 45%),
+      radial-gradient(circle at 85% 25%, hsla(43, 86%, 50%, 0.08), transparent 40%),
+      radial-gradient(circle at 50% 90%, hsla(43, 86%, 45%, 0.10), transparent 50%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--hero-gradient);
+  }
+  .bg-section-alt {
+    background-color: hsl(var(--section-alt));
+  }
+  .bg-stats {
+    background-color: hsl(var(--stats-bg));
+    color: hsl(var(--stats-foreground));
+  }
+
+  /* Neon text glow */
+  .neon-gold {
+    color: hsl(48, 95%, 72%);
+    text-shadow:
+      0 0 4px hsla(var(--neon), 0.9),
+      0 0 12px hsla(var(--neon), 0.7),
+      0 0 28px hsla(var(--neon), 0.45);
+  }
+  .neon-text {
+    text-shadow:
+      0 0 6px hsla(var(--neon), 0.55),
+      0 0 18px hsla(var(--neon), 0.35);
+  }
+  /* Animated shimmering gold gradient text */
+  .gold-shimmer {
+    background-image: linear-gradient(
+      100deg,
+      hsl(45, 70%, 52%) 0%,
+      hsl(48, 95%, 72%) 25%,
+      hsl(50, 100%, 92%) 45%,
+      hsl(48, 95%, 72%) 60%,
+      hsl(43, 74%, 49%) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: gold-shimmer 4s linear infinite;
+    filter: drop-shadow(0 0 10px hsla(var(--neon), 0.35));
+  }
+  .neon-border {
+    border-color: hsla(var(--neon), 0.45);
+    box-shadow:
+      0 0 0 1px hsla(var(--neon), 0.18),
+      0 0 18px hsla(var(--neon), 0.18),
+      inset 0 0 18px hsla(var(--neon), 0.06);
+  }
+  .neon-card {
+    background-color: hsla(40, 14%, 8%, 0.75);
+    backdrop-filter: blur(6px);
+    border: 1px solid hsla(var(--neon), 0.18);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  }
+  .neon-card:hover {
+    transform: translateY(-6px);
+    border-color: hsla(var(--neon), 0.55);
+    box-shadow:
+      0 0 24px hsla(var(--neon), 0.25),
+      0 10px 40px hsla(0, 0%, 0%, 0.5);
+  }
+
+  /* 3D parallax depth helpers */
+  .scene-3d {
+    perspective: 1200px;
+  }
+  .tilt-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease-out;
+  }
+  .neon-glow-pulse {
+    animation: neon-pulse 3.2s ease-in-out infinite;
+  }
+}
+
+@keyframes gold-shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+@keyframes neon-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px hsla(var(--neon), 0.5)) drop-shadow(0 0 18px hsla(var(--neon), 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px hsla(var(--neon), 0.85)) drop-shadow(0 0 34px hsla(var(--neon), 0.5));
+  }
+}
