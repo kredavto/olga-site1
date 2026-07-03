@@ -130,13 +130,13 @@ header.hero{
 .hero h1 .line span{display:block;transform:translateY(110%);opacity:0}
 .hero h1 em{font-style:italic;color:var(--gold)}
 .hero-sub{
-  margin:2rem auto 3rem;max-width:560px;font-size:1.2rem;color:rgba(255,253,248,.82);opacity:0;
+  margin:2rem auto 3rem;max-width:560px;font-size:1.2rem;color:rgba(255,253,248,.95);opacity:0;
 }
 .btn{
   display:inline-block;position:relative;background:var(--black);color:var(--cream);
   border:1px solid rgba(200,169,106,.0);border-radius:999px;
-  padding:1.05rem 3rem;font-family:var(--sans);font-size:.78rem;
-  letter-spacing:.28em;text-transform:uppercase;cursor:pointer;
+  padding:1.05rem 3rem;font-family:var(--sans);font-size:1.15rem;
+  letter-spacing:.22em;text-transform:uppercase;cursor:pointer;
   transition:border-color .5s var(--ease),box-shadow .5s var(--ease),transform .5s cubic-bezier(.34,1.56,.64,1),background .5s;
 }
 .btn:hover{
@@ -147,7 +147,7 @@ header.hero{
 .scroll-hint{
   position:absolute;bottom:2.4rem;left:50%;transform:translateX(-50%);z-index:3;
   display:flex;flex-direction:column;align-items:center;gap:.7rem;
-  color:rgba(255,253,248,.75);font-size:1.3rem;letter-spacing:.4em;text-transform:uppercase;
+  color:rgba(255,253,248,.95);font-size:1.3rem;letter-spacing:.4em;text-transform:uppercase;
 }
 .scroll-hint .dot{
   width:1px;height:46px;background:linear-gradient(var(--gold),transparent);
@@ -220,7 +220,7 @@ section{padding:clamp(5rem,11vw,10rem) clamp(1.5rem,6vw,7rem);position:relative}
 
 /* ---------- Craft / preparation ---------- */
 .craft{background:var(--black);color:var(--cream)}
-.craft .lead{color:rgba(255,253,248,.66)}
+.craft .lead{color:rgba(255,253,248,.9)}
 .steps{margin-top:5rem;display:flex;flex-direction:column;gap:clamp(4rem,9vw,7.5rem)}
 .step{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,6vw,5rem);align-items:center}
 .step:nth-child(even) .step-media{order:2}
@@ -231,7 +231,7 @@ section{padding:clamp(5rem,11vw,10rem) clamp(1.5rem,6vw,7rem);position:relative}
   -webkit-text-stroke:1px rgba(200,169,106,.55);line-height:1;
 }
 .step h3{font-size:clamp(1.6rem,2.6vw,2.3rem);margin:1rem 0;color:var(--cream)}
-.step p{color:rgba(255,253,248,.72);font-size:1.15rem;max-width:460px}
+.step p{color:rgba(255,253,248,.9);font-size:1.15rem;max-width:460px}
 .steam{position:absolute;bottom:0;left:0;right:0;height:100%;pointer-events:none;overflow:hidden}
 .steam i{
   position:absolute;bottom:-20%;width:9px;height:9px;border-radius:50%;
@@ -263,7 +263,7 @@ section{padding:clamp(5rem,11vw,10rem) clamp(1.5rem,6vw,7rem);position:relative}
 .masonry:hover .m-item:not(:hover) img{filter:blur(2px) brightness(.92)}
 
 /* ---------- Footer ---------- */
-footer{background:var(--black);color:rgba(255,253,248,.7);padding:clamp(4.5rem,9vw,8rem) clamp(1.5rem,6vw,7rem) 2.5rem}
+footer{background:var(--black);color:rgba(255,253,248,.92);padding:clamp(4.5rem,9vw,8rem) clamp(1.5rem,6vw,7rem) 2.5rem}
 .f-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.4fr;gap:3rem}
 footer h4{
   font-family:var(--serif);font-size:1.25rem;color:var(--cream);margin-bottom:1.4rem;
@@ -282,7 +282,7 @@ footer a:hover{color:var(--gold)}
   flex:1;background:transparent;border:0;padding:.9rem 1.4rem;color:var(--cream);
   font-family:var(--sans);font-size:1.2rem;outline:none;
 }
-.news input::placeholder{color:rgba(255,253,248,.4)}
+.news input::placeholder{color:rgba(255,253,248,.7)}
 .news button{
   background:var(--gold);color:var(--black);border:0;padding:0 1.8rem;cursor:pointer;
   font-size:1.08rem;letter-spacing:.2em;text-transform:uppercase;transition:background .4s;
@@ -305,7 +305,7 @@ footer a:hover{color:var(--gold)}
 .f-bottom{
   margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(200,169,106,.18);
   display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
-  font-size:1.5rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,253,248,.55);
+  font-size:1.5rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,253,248,.85);
 }
 
 /* ---------- cursor glow ---------- */
