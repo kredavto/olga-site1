@@ -130,7 +130,7 @@ header.hero{
 .hero h1 .line span{display:block;transform:translateY(110%);opacity:0}
 .hero h1 em{font-style:italic;color:var(--gold)}
 .hero-sub{
-  margin:2rem auto 3rem;max-width:900px;font-size:2.4rem;line-height:1.4;color:rgba(255,253,248,.95);opacity:0;
+  margin:2rem auto 3rem;max-width:900px;font-size:2rem;line-height:1.4;color:rgba(255,253,248,.95);opacity:0;
 }
 .btn{
   display:inline-block;position:relative;background:var(--black);color:rgba(255,253,248,.6);
@@ -372,9 +372,7 @@ footer a:hover{color:var(--gold)}
       <span class="line"><span><em>идеальной чашки</em></span></span>
     </h1>
     <p class="hero-sub">Эспрессо из моносортов, авторская венская выпечка и неспешное гостеприимство — в тишине золотого света.</p>
-    <a class="btn" href="#collection">Познакомиться</a>
   </div>
-  <div class="scroll-hint"><span>Листайте</span><span class="dot"></span></div>
 </header>
 
 <main>
@@ -554,8 +552,7 @@ footer a:hover{color:var(--gold)}
       gsap.timeline()
         .to('.hero-kicker', { opacity: 1, duration: 1.2, ease: 'power2.out' })
         .to('.hero h1 .line span', { y: 0, opacity: 1, duration: 1.4, stagger: 0.18, ease: 'power4.out' }, '-=0.8')
-        .to('.hero-sub', { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, '-=0.9')
-        .to('.hero .btn', { opacity: 1, duration: 1, ease: 'power2.out' }, '-=0.7');
+        .to('.hero-sub', { opacity: 1, y: 0, duration: 1.2, ease: 'power2.out' }, '-=0.9');
     }, 900);
   });
 
